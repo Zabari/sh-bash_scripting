@@ -1,0 +1,7 @@
+#!/bin/sh
+read term
+for x in $( ls -AF | grep -v "/" ); do
+  if [ `grep -i $term $x` ]; then
+    echo $x
+  fi
+end
