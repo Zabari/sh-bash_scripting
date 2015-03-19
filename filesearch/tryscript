@@ -2,7 +2,7 @@
 echo "Enter your search term:"
 read term
 for x in $( ls -AF | grep -v "/" ); do
-  if [ `grep -i $term $x` ]; then
+  if grep -q -i $term $x  ; then
     echo $x
   fi
 done
